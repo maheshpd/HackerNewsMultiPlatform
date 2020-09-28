@@ -9,8 +9,25 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @ObservedObject var manager = NetworkManager()
+    
     var body: some View {
-        Text("Hello, World!")
+        NavigationView {
+            
+            List(manager.posts) { post in
+                NavigationLink(destination: DetailView(url: post.url)) {
+                    HStack {
+                        Text(post.title)
+//                        Text(post.url ?? "")
+                    }
+                }
+            }.navigationBarTitle("Hacker News Clone")
+        }
+        .onAppear {
+            self.manager.getNews()
+        }
+        
     }
 }
 
