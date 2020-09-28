@@ -13,6 +13,8 @@
 		B54C07D52521F74300534459 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B54C07D42521F74300534459 /* Assets.xcassets */; };
 		B54C07D82521F74300534459 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B54C07D72521F74300534459 /* Preview Assets.xcassets */; };
 		B54C07DB2521F74300534459 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B54C07D92521F74300534459 /* LaunchScreen.storyboard */; };
+		B54C07E42521F7B300534459 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54C07E32521F7B300534459 /* NetworkManager.swift */; };
+		B54C07E72521F7F000534459 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54C07E62521F7F000534459 /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		B54C07D72521F74300534459 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B54C07DA2521F74300534459 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B54C07DC2521F74300534459 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B54C07E32521F7B300534459 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		B54C07E62521F7F000534459 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 		B54C07CD2521F73D00534459 /* HackerNewsMultiPlatform */ = {
 			isa = PBXGroup;
 			children = (
+				B54C07E52521F7D200534459 /* Models */,
+				B54C07E22521F79400534459 /* Services */,
 				B54C07CE2521F73D00534459 /* AppDelegate.swift */,
 				B54C07D02521F73E00534459 /* SceneDelegate.swift */,
 				B54C07D22521F73E00534459 /* ContentView.swift */,
@@ -73,6 +79,22 @@
 				B54C07D72521F74300534459 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B54C07E22521F79400534459 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B54C07E32521F7B300534459 /* NetworkManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B54C07E52521F7D200534459 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B54C07E62521F7F000534459 /* Post.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,9 +168,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B54C07E42521F7B300534459 /* NetworkManager.swift in Sources */,
 				B54C07CF2521F73D00534459 /* AppDelegate.swift in Sources */,
 				B54C07D12521F73E00534459 /* SceneDelegate.swift in Sources */,
 				B54C07D32521F73E00534459 /* ContentView.swift in Sources */,
+				B54C07E72521F7F000534459 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +313,7 @@
 				DEVELOPMENT_TEAM = 84W8QG5399;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = HackerNewsMultiPlatform/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -309,6 +334,7 @@
 				DEVELOPMENT_TEAM = 84W8QG5399;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = HackerNewsMultiPlatform/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
